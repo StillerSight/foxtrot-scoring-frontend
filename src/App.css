@@ -70,12 +70,105 @@ html, body, #root {
   padding: 2rem;
 }
 
-/* optional: host cards styling */
+/* Container for all host cards */
+.host-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers cards horizontally */
+  gap: 1rem;
+}
+
+/* Individual host card */
 .host-card {
+  width: 90%;                /* for small screens */
+  max-width: 600px;          /* don't stretch beyond this */
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 1rem;
   backdrop-filter: blur(4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+/* team name title */
+.team-title {
+  display: inline-block; /* so the background wraps tightly around text */
+  background: rgba(0, 0, 0, 0.6); /* translucent black */
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px); /* gives a frosted-glass look */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* host card status */
+/* Remove default list styling */
+.host-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Layout for each service row */
+.host-card li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Base dot style */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: gray; /* fallback */
+  box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+/* Color states */
+.status-dot.up {
+  background-color: #00ff6a;       /* bright green */
+  box-shadow: 0 0 6px #00ff6a;     /* subtle glow */
+}
+
+.status-dot.down {
+  background-color: #ff3b3b;       /* red */
+  box-shadow: 0 0 6px #ff3b3b;
+}
+
+/* Layout for host cards on the Home page */
+.host-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+/* Each team section */
+.host-section {
+  width: 100%;
+}
+
+.host-team-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }

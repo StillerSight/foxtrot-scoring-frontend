@@ -1,34 +1,18 @@
-// src/pages/TeamAlpha.jsx
-import HostList from "../components/HostList";
+import HostCard from "../components/HostCard";
+import data from "../data/hosts.json";
 
 function TeamAlpha() {
-  const hosts = [
-    {
-      id: 1,
-      name: "Linux Host 1",
-      icon: "🖥️",
-      services: [
-        { name: "DNS", up: false },
-        { name: "API", up: true },
-        { name: "Frontend", up: false },
-      ],
-    },
-    {
-      id: 2,
-      name: "Linux Host 2",
-      icon: "🖥️",
-      services: [
-        { name: "DNS", up: true },
-        { name: "API", up: true },
-        { name: "Frontend", up: false },
-      ],
-    },
-  ];
+  const team = data.teams.find(t => t.name === "Alpha");
 
   return (
     <div className="page">
-      <h1>Team Alpha</h1>
-      <HostList hosts={hosts} />
+      <h1 className="team-title">{team.name} Team</h1>
+
+      <div className="dashboard-grid">
+        {team.hosts.map((host, i) => (
+          <HostCard key={i} host={{ ...host, icon: team.icon }} />
+        ))}
+      </div>
     </div>
   );
 }

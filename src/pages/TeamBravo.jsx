@@ -1,24 +1,18 @@
-// src/pages/TeamBravo.jsx
-import HostList from "../components/HostList";
+import HostCard from "../components/HostCard";
+import data from "../data/hosts.json";
 
 function TeamBravo() {
-  const hosts = [
-    {
-      id: 1,
-      name: "Bravo Host 1",
-      icon: "🖥️",
-      services: [
-        { name: "Database", up: true },
-        { name: "API", up: true },
-        { name: "Frontend", up: false },
-      ],
-    },
-  ];
+  const team = data.teams.find(t => t.name === "Bravo");
 
   return (
     <div className="page">
-      <h1>Team Bravo</h1>
-      <HostList hosts={hosts} />
+      <h1 className="team-title">{team.name} Team</h1>
+
+      <div className="dashboard-grid">
+        {team.hosts.map((host, i) => (
+          <HostCard key={i} host={{ ...host, icon: team.icon }} />
+        ))}
+      </div>
     </div>
   );
 }

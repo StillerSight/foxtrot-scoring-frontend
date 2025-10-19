@@ -1,0 +1,97 @@
+{
+  "teams": [
+    {
+      "name": "Alpha",
+      "icon": "",
+      "hosts": [
+        {
+          "name": "Linux Host 1",
+          "services": [
+            { "name": "Database", "up": true },
+            { "name": "Nginx", "up": true },
+            { "name": "FTP", "up": false }
+          ]
+        },
+        {
+          "name": "Linux Host 2",
+          "services": [
+            { "name": "DNS", "up": true },
+            { "name": "IMAP", "up": false },
+            { "name": "SSH", "up": false }
+          ]
+        },
+        {
+          "name": "Windows Server",
+          "services": [
+            { "name": "AD", "up": true },
+            { "name": "WinRM", "up": false },
+            { "name": "SMB", "up": false },
+            { "name": "Ping", "up": false }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bravo",
+      "icon": "",
+      "hosts": [
+        {
+          "name": "Linux Host 1",
+          "services": [
+            { "name": "Database", "up": false },
+            { "name": "Nginx", "up": false },
+            { "name": "FTP", "up": false }
+          ]
+        },
+        {
+          "name": "Linux Host 2",
+          "services": [
+            { "name": "DNS", "up": true },
+            { "name": "IMAP", "up": true },
+            { "name": "SSH", "up": true }
+          ]
+        },
+        {
+          "name": "Windows Server",
+          "services": [
+            { "name": "AD", "up": false },
+            { "name": "WinRM", "up": true },
+            { "name": "SMB", "up": true },
+            { "name": "Ping", "up": false }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Charlie",
+      "icon": "",
+      "hosts": [
+        {
+          "name": "Linux Host 1",
+          "services": [
+            { "name": "Database", "up": false },
+            { "name": "Nginx", "up": false },
+            { "name": "FTP", "up": true }
+          ]
+        },
+        {
+          "name": "Linux Host 2",
+          "services": [
+            { "name": "DNS", "up": true },
+            { "name": "IMAP", "up": true },
+            { "name": "SSH", "up": true }
+          ]
+        },
+        {
+          "name": "Windows Server",
+          "services": [
+            { "name": "AD", "up": true },
+            { "name": "WinRM", "up": true },
+            { "name": "SMB", "up": true },
+            { "name": "Ping", "up": true }
+          ]
+        }
+      ]
+    }
+  ]
+}
