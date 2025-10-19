@@ -9,7 +9,7 @@ function Home() {
     <div className="page home-page">
       <h1 className="team-title">Team Service Overview</h1>
 
-      <div className="dashboard-grid">
+      <div className="team-grid">
         {teams.map((team, i) => (
           <div key={i} className="dashboard-item">
             <TeamCard team={team} />

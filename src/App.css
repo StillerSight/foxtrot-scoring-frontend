@@ -66,7 +66,7 @@ html, body, #root {
 /* Individual host card */
 .host-card {
   width: 90%;                /* for small screens */
-  max-width: 600px;          /* don't stretch beyond this */
+  max-width: 300px;          /* don't stretch beyond this */
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 10px;
@@ -156,4 +156,16 @@ html, body, #root {
   opacity: 0.9;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.team-grid {
+  display: flex;                 /* row layout */
+  flex-direction: row;           /* ensure horizontal layout */
+  flex-wrap: wrap;               /* wrap to next line if too many cards */
+  justify-content: center;       /* center the row horizontally */
+  align-items: flex-start;       /* align cards at top */
+  gap: 2rem;                     /* spacing between cards */
+  width: 100%;
+  max-width: 1200px;             /* max container width */
+  margin: 2rem auto;             /* center container on page */
 }

@@ -1,40 +1,38 @@
-// src/components/Background.jsx
 import React from "react";
 import { useLocation } from "react-router-dom";
-import "../App.css";
-
-let origin = "center center";
+import { motion } from "framer-motion";
+import "./Background.css";
 
 function Background() {
   const location = useLocation();
   const path = location.pathname.toLowerCase();
 
-  // Default view (home)
+  // Default (Home)
   let scale = 1;
+  let origin = "50% 50%";
 
-  // Adjust zoom and focus for each team
+  // Team-specific zoom/pan
   if (path.includes("team-alpha")) {
     scale = 2;
-    origin = "0% 0%"; // moves focus to top-left region
+    origin = "0% 0%";
   } else if (path.includes("team-bravo")) {
     scale = 2;
-    origin = "50% 0%"; // middle-right
+    origin = "50% 0%";
   } else if (path.includes("team-charlie")) {
     scale = 2;
-    origin = "100% 0%"; // bottom area
+    origin = "100% 0%";
   }
 
   return (
-    <div
+    <motion.div
       className="background"
-      style={{
-        backgroundImage: `url('/background.jpg')`,
-        transform: `scale(${scale})`,
-        transformOrigin: origin,
-      }}
+      initial={false}
+      animate={{ scale, transformOrigin: origin }}
+      transition={{ duration: 2, ease: "easeInOut" }}
+      style={{ backgroundImage: `url('/background.jpg')` }}  // ✅ Direct path
     >
       <div className="vignette" />
-    </div>
+    </motion.div>
   );
 }
 
