@@ -40,25 +40,10 @@ html, body, #root {
   position: relative;
   margin-top: 60px; /* pushes content below navbar */
   min-height: calc(100vh - 60px); /* fill rest of the screen */
-  background-image: url("/background.jpg");
   background-size: cover;       /* make it cover the screen */
   background-position: center;  /* center it */
   background-repeat: no-repeat;
   overflow: hidden;
-}
-
-/* ✨ Add vignette overlay */
-.content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(0,0,0,0) 60%,
-    rgba(0,0,0,0.6) 100%
-  );
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* 📦 Content inside stays above the vignette */

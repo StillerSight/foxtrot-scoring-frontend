@@ -1,14 +1,15 @@
 // src/App.jsx
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import TeamAlpha from "./pages/TeamAlpha";
-import TeamBravo from "./pages/TeamBravo";
-import TeamCharlie from "./pages/TeamCharlie";
+import TeamPage from "./pages/TeamPage";
+import Background from "./components/Background";
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
+      <Background />
+
       <nav className="navbar">
         <Link to="/">Home</Link>
         <Link to="/team-alpha">Team Alpha</Link>
@@ -19,9 +20,7 @@ function App() {
        <main className="content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/team-alpha" element={<TeamAlpha />} />
-          <Route path="/team-bravo" element={<TeamBravo />} />
-          <Route path="/team-charlie" element={<TeamCharlie />} />
+          <Route path="/:teamName" element={<TeamPage />} /> 
           <Route path="*" element={<p>Page not found</p>} />
         </Routes>
       </main>
