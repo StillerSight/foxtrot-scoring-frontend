@@ -13,6 +13,16 @@ function TeamAlpha() {
         { name: "Frontend", up: false },
       ],
     },
+    {
+      id: 2,
+      name: "Linux Host 2",
+      icon: "🖥️",
+      services: [
+        { name: "DNS", up: true },
+        { name: "API", up: true },
+        { name: "Frontend", up: false },
+      ],
+    },
   ];
 
   return (
