@@ -1,42 +1,48 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f5f5f5;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 🔝 Navbar styling */
+.navbar {
+  position: fixed;            /* make it stay at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #1e1e2f;  /* dark navy header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 100;              /* stay above everything else */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
-.card {
-  padding: 2em;
+.navbar a:hover {
+  text-decoration: underline;
 }
 
-.read-the-docs {
-  color: #888;
+/* 🔽 Push content below navbar */
+.content {
+  margin-top: 80px; /* enough space so content isn’t hidden under navbar */
+  padding: 1rem;
+}
+
+/* optional styling for host cards */
+.host-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
