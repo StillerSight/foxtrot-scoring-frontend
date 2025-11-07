@@ -3,30 +3,38 @@
     {
       "name": "Alpha",
       "icon": "",
+      "score": 100,
       "hosts": [
         {
-          "name": "Linux Host 1",
+          "name": "stalingrad",
           "services": [
-            { "name": "Database", "up": true },
-            { "name": "Nginx", "up": true },
-            { "name": "FTP", "up": false }
+            { "name": "AD", "up": false }
           ]
         },
         {
-          "name": "Linux Host 2",
+          "name": "saint-petersburg",
           "services": [
-            { "name": "DNS", "up": true },
+            { "name": "WinRM", "up": false }
+          ]
+        },
+        {
+          "name": "moscow",
+          "services": [
+            { "name": "SMB", "up": false }
+          ]
+        },
+        {
+          "name": "dallas",
+          "services": [
             { "name": "IMAP", "up": false },
-            { "name": "SSH", "up": false }
+            { "name": "NGINX", "up": false }
           ]
         },
         {
-          "name": "Windows Server",
+          "name": "chicago",
           "services": [
-            { "name": "AD", "up": true },
-            { "name": "WinRM", "up": false },
-            { "name": "SMB", "up": false },
-            { "name": "Ping", "up": false }
+            { "name": "SQL", "up": true },
+            { "name": "FTP", "up": false }
           ]
         }
       ]
@@ -34,30 +42,38 @@
     {
       "name": "Bravo",
       "icon": "",
+      "score": 100,
       "hosts": [
         {
-          "name": "Linux Host 1",
+          "name": "stalingrad",
           "services": [
-            { "name": "Database", "up": false },
-            { "name": "Nginx", "up": false },
+            { "name": "AD", "up": false }
+          ]
+        },
+        {
+          "name": "saint-petersburg",
+          "services": [
+            { "name": "WinRM", "up": false }
+          ]
+        },
+        {
+          "name": "moscow",
+          "services": [
+            { "name": "SMB", "up": false }
+          ]
+        },
+        {
+          "name": "dallas",
+          "services": [
+            { "name": "IMAP", "up": false },
+            { "name": "NGINX", "up": false }
+          ]
+        },
+        {
+          "name": "chicago",
+          "services": [
+            { "name": "SQL", "up": true },
             { "name": "FTP", "up": false }
-          ]
-        },
-        {
-          "name": "Linux Host 2",
-          "services": [
-            { "name": "DNS", "up": true },
-            { "name": "IMAP", "up": true },
-            { "name": "SSH", "up": true }
-          ]
-        },
-        {
-          "name": "Windows Server",
-          "services": [
-            { "name": "AD", "up": false },
-            { "name": "WinRM", "up": true },
-            { "name": "SMB", "up": true },
-            { "name": "Ping", "up": false }
           ]
         }
       ]
@@ -65,30 +81,38 @@
     {
       "name": "Charlie",
       "icon": "",
+      "score": 100,
       "hosts": [
         {
-          "name": "Linux Host 1",
+          "name": "stalingrad",
           "services": [
-            { "name": "Database", "up": false },
-            { "name": "Nginx", "up": false },
-            { "name": "FTP", "up": true }
+            { "name": "AD", "up": false }
           ]
         },
         {
-          "name": "Linux Host 2",
+          "name": "saint-petersburg",
           "services": [
-            { "name": "DNS", "up": true },
-            { "name": "IMAP", "up": true },
-            { "name": "SSH", "up": true }
+            { "name": "WinRM", "up": false }
           ]
         },
         {
-          "name": "Windows Server",
+          "name": "moscow",
           "services": [
-            { "name": "AD", "up": true },
-            { "name": "WinRM", "up": true },
-            { "name": "SMB", "up": true },
-            { "name": "Ping", "up": true }
+            { "name": "SMB", "up": false }
+          ]
+        },
+        {
+          "name": "dallas",
+          "services": [
+            { "name": "IMAP", "up": false },
+            { "name": "NGINX", "up": false }
+          ]
+        },
+        {
+          "name": "chicago",
+          "services": [
+            { "name": "SQL", "up": true },
+            { "name": "FTP", "up": false }
           ]
         }
       ]
