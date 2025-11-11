@@ -19,4 +19,20 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Running the server
 
-npm run dev
+### 1. First install Node.js
+- nodejs.org for **Windows**
+- ```sudo apt install nodejs npm``` on **Linux**
+
+You can ensure that the modules are installed by checking:
+- ```node -v```
+- ```npm -v```
+
+### 2. Installing npm
+- Navigate to the project directory.
+- Run the command: 
+```npm install```
+
+### 3. Running the server
+- Navigate to the project directory.
+- Run the following command:
+```npm run dev```
